@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paolo Pedrizzi | Analogico ma non troppo</title>
+  <meta name="description" content="Il sito personale di Paolo Pedrizzi: lavoro, pensieri, tecnologia, sport e vita reale." />
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --text: #1f2933;
+      --muted: #64748b;
+      --card: #ffffff;
+      --accent: #b45309;
+      --accent-dark: #78350f;
+      --line: #e5ded3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      padding: 28px 24px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 244, 238, 0.92);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+    }
+
+    nav {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 22px;
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      margin: 0 0 24px;
+      color: #111827;
+    }
+
+    .lead {
+      font-size: 22px;
+      color: #334155;
+      max-width: 720px;
+      margin: 0 0 28px;
+    }
+
+    .button {
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      background: var(--accent-dark);
+      color: #fff;
+      padding: 13px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+      border: 1px solid var(--accent-dark);
+    }
+
+    .portrait {
+      background: linear-gradient(135deg, #fff7ed, #fed7aa);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(120, 53, 15, 0.08);
+      font-family: Arial, sans-serif;
+      color: var(--accent-dark);
+      font-weight: 800;
+      font-size: 28px;
+    }
+
+    section { margin-top: 54px; }
+
+    h2 {
+      font-size: 34px;
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+      color: #111827;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p { margin: 0; color: var(--muted); }
+
+    .posts {
+      display: grid;
+      gap: 14px;
+    }
+
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    article time {
+      font-family: Arial, sans-serif;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    article h3 {
+      margin: 8px 0 8px;
+      font-size: 25px;
+      letter-spacing: -0.04em;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 24px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    footer div {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 760px) {
+      header { position: static; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .portrait { min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="#">Paolo Pedrizzi</a>
+      <div class="links">
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#pensieri">Pensieri</a>
+        <a href="#libro">Il libro</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Analogico ma non troppo</div>
+        <h1>Idee, lavoro e vita reale nell’era digitale.</h1>
+        <p class="lead">
+          Uno spazio personale dove raccolgo pensieri su tecnologia, economia, politica, sport e memoria generazionale. Con i piedi negli anni Ottanta e lo sguardo sul presente.
+        </p>
+        <a class="button" href="#pensieri">Leggi i pensieri</a>
+        <a class="button secondary" href="#chi-sono">Chi sono</a>
+      </div>
+      <div class="portrait">
+        Paolo<br />Pedrizzi
+      </div>
+    </section>
+
+    <section id="chi-sono">
+      <h2>Chi sono</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lavoro</h3>
+          <p>Esperienza, relazioni, distribuzione, prodotti e persone. La tecnologia mi interessa quando migliora davvero la vita concreta.</p>
+        </div>
+        <div class="card">
+          <h3>Metodo</h3>
+          <p>Mi piace osservare, capire e poi semplificare. Meno rumore, più sostanza.</p>
+        </div>
+        <div class="card">
+          <h3>Identità</h3>
+          <p>Sono cresciuto nel mondo analogico e vivo quello digitale senza farmi comandare dagli strumenti.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pensieri">
+      <h2>Pensieri recenti</h2>
+      <div class="posts">
+        <article>
+          <time>Primo appunto</time>
+          <h3>L’AI non mi spaventa. Mi spaventa dimenticare.</h3>
+          <p>Questo sarà il primo spazio del blog: pensieri liberi, scritti quando serve, senza inseguire l’algoritmo.</p>
+        </article>
+        <article>
+          <time>Sport, economia, politica</time>
+          <h3>Guardare il presente con memoria.</h3>
+          <p>Qui potranno entrare riflessioni sulla situazione del momento, sullo sport, sui cambiamenti economici e su quello che succede intorno a noi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="libro">
+      <h2>Il libro</h2>
+      <div class="card">
+        <h3>Analogico ma non troppo, che faccio lascio?</h3>
+        <p>Un progetto autobiografico sulla generazione che ha attraversato il passaggio dagli anni Ottanta al mondo digitale. Non nostalgia, ma memoria utile.</p>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <h2>Contatti</h2>
+      <div class="card">
+        <p>Per ora questo sito nasce come spazio personale. I contatti verranno aggiunti quando sarà il momento giusto.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Paolo Pedrizzi · pedrizzi.it</div>
+  </footer>
+</body>
+</html>
